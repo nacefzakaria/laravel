@@ -1,0 +1,20 @@
+name: Laravel
+
+on: 
+  push:
+    branches: [ "master" ]
+
+
+jobs:
+  laravel-deployment:
+    name: Create Deployment
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Compile CSS & JS
+        run: |
+          npm install
+          npm run prod
+      - name: Install Depencies
+        run: composer install --no-dev --no-interaction --prefer-dist
