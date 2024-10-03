@@ -14,7 +14,7 @@ class AppMailer extends Mailable
     public $details;
   
     /**
-     * Create a new message instance.
+     * Create a new message instance. zbbi
      *
      * @return void
      */
